@@ -60,6 +60,7 @@ export default function Home() {
         {generatedMeme && (
           <>
             <img src={generatedMeme} alt="Generated Meme" />
+            <Button type="button" ><a href={generatedMeme} download>Baixa meme</a> </Button>
             <Button type="button" onClick={handleReset}>Criar outro meme</Button>
           </>
         )}
@@ -89,6 +90,7 @@ export default function Home() {
                       key={String(Math.random())}
                       placeholder={`Text #${index + 1}`}
                       onChange={handleInputChange(index)}
+                      required
                     />
                   ))}
 

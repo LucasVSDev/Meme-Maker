@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
 
 export const Card = styled.div`
   background: #fff;
-  width: 550px;
+  width: 550px; /* 550px */
   border-radius: 8px;
   padding: 20px;
   margin-top: 15px;
@@ -26,7 +26,7 @@ export const Card = styled.div`
 
 export const Templates = styled.div`
   width: 100%;
-  height: 90px;
+  height: 130px;
   background: #eee;
   border-radius: 8px;
   overflow-y: auto;
@@ -45,8 +45,8 @@ export const Templates = styled.div`
     }
 
     img {
-      width: 53px;
-      height: 53px;
+      width: 100px; //53px
+      height: 100px; // 53px
     }
   }
 `;
@@ -66,6 +66,7 @@ export const Form = styled.form`
 export const Button = styled.button`
   width: 100%;
   height: 40px;
+  margin-top: 10px; // <=
   border-radius: 8px;
   background: #4395D8;
   color: #fff;
@@ -77,4 +78,10 @@ export const Button = styled.button`
   &:hover {
     background: #3672A3;
   }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+
 `;
