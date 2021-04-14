@@ -60,7 +60,7 @@ export default function Home() {
         {generatedMeme && (
           <>
             <img src={generatedMeme} alt="Generated Meme" />
-            <Button type="button" ><a href={generatedMeme} download>Baixa meme</a> </Button>
+            <Button type="button" ><a href={generatedMeme} download>Baixar meme</a> </Button>
             <Button type="button" onClick={handleReset}>Criar outro meme</Button>
           </>
         )}
