@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import qs from 'qs';
 
-import { Wrapper, Card, Templates, Form, Button } from './styles';
+import { Wrapper, Card, Templates, Form, Button, Div } from './styles';
 import logo from '../../img/logo.svg';
 
 export default function Home() {
@@ -58,10 +58,14 @@ export default function Home() {
 
       <Card>
         {generatedMeme && (
-          <>
-            <img src={generatedMeme} alt="Generated Meme" />
-            <Button type="button" onClick={handleReset}>Criar outro meme</Button>
-          </>
+          <Div>
+            <>
+              <img src={generatedMeme} alt="Generated Meme" />
+              <Button type="button" ><a href={generatedMeme} download>Baixar meme</a> </Button>
+              <Button type="button" onClick={handleReset}>Criar outro meme</Button>
+            </>
+          </Div>
+
         )}
 
         {!generatedMeme && (
@@ -89,6 +93,7 @@ export default function Home() {
                       key={String(Math.random())}
                       placeholder={`Text #${index + 1}`}
                       onChange={handleInputChange(index)}
+                      required
                     />
                   ))}
 
